@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier Prime';
+
+        }
+        .background-wrraper{
+            width: 1280px;
+            height: 771px;
+           background-color: black;
+           background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20211108/pngtree-abstract-blue-plain-background-with-modern-style-and-dynamic-lines-image_915412.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+        .stuff-container{
+            position: absolute;
+            top: 120px;
+            left: 150px;
+            height: 550px;
+            width: 900px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), /* Top shadow */
+                0px 0px 10px rgba(0, 0, 0, 0.3), /* Right shadow */
+                0px 0px 10px rgba(0, 0, 0, 0.3), /* Bottom shadow */
+                0px 0px 10px rgba(0, 0, 0, 0.3); /* Left shadow */
+        }
+
+        #ft_img{
+            width: 550px;
+            height: 550px;
+        }
+        #wlcm{
+            color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        #Lorem{
+            position: absolute;
+            top: 190px;
+            left: 40px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 20px;
+        }
+
+      
+        #logo{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            border-radius: 20px;
+        }
+
+        #logo-lbl{
+            width: 500px;
+            position: absolute;
+            top: 30px;
+            left: 170px;
+            font-size: 30px;
+            color: white;
+            z-index: 10;
+        }
+        
+       #username{
+        position: absolute;
+        top: 120px;
+        left: 650px;
+        color: blue;
+       }
+
+       #username_plc{
+        position: absolute;
+        top: 180px !important;
+        left: 580px;
+        width: 250px;
+        height: 50px;
+        border-radius: 20px;
+        padding-left: 38px;
+       }
+
+       input[type='text']{
+        font-size: 15px;
+       }
+       input[type='password']{
+        font-size: 15px;
+       }
+
+       #password-plc{
+        position: absolute;
+        top: 250px;
+        left: 580px;
+        width: 250px;
+        height: 50px;
+        border-radius: 20px;
+        padding-left: 38px;
+       }
+       #rmb{
+        position: absolute;
+        top: 327px;
+        left: 585px;
+        height: 19px;
+        width: 19px;
+       }
+       #rmb2{
+        position: absolute;
+        top: 327px;
+        color: black;
+        left: 610px;
+        z-index: 10;
+        width: 106px;
+        font-size: 16px;
+        
+       }
+       
+       #forgot{
+        position: absolute;
+        top: 330px;
+        left: 750px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+       }
+       #forgot:hover{
+        opacity: 0.5;
+       }
+
+       #lgn{
+        position: absolute;
+        top: 370px;
+        left: 670px;
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        background-image: url(https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sb3IlMjBncmFkaWVudHxlbnwwfHwwfHx8MA%3D%3D);
+        background-repeat: no-repeat;
+        background-size: cover; 
+       }
+
+       #lgn:hover{
+        opacity: 0.5;
+       }
+
+       #usr_logo{
+        position: absolute;
+        top: 192px;
+        width: 30px;
+        height: 30px;
+        left: 585px;
+       }
+       #pass_logo{
+        position: absolute;
+        top: 265px;
+        width: 22px;
+        height: 22px;
+        left: 590px;
+       }
+       #pass-see-eye,#pass-close-eye{
+        position: absolute;
+        top: 260px;
+        width: 30px;
+        height: 30px;
+        left: 820px;
+       }
+       #pass-close-eye{
+        width: 25px;
+        height: 25px;
+        top: 263px;
+
+        left: 823px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 378px;
+        left: 662px;
+        height: 30px;
+        width: 106px;
+        border-radius: 10px;
+}
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+      /*Now we make this page responsive and user friendly*/
+   
+    #check{
+        position: absolute;
+        top: 0;
+        left: 100px;
+        height: 100px;
+        width: 100px;
+        background-color: black;
+    }
+     
+   
+
+
+
+
+    </style> 
+</head>
+<body>
+
+    <!--This is the elment when the website is open in the desktop-->
+<div class="desktop_element">
+    <img src="https://i.pinimg.com/originals/89/f6/d8/89f6d83268c3220a06253acb858706b8.png" id="logo">
+    <p id="logo-lbl">Switch A.I</p>
+    
+    <div class="background-wrraper"></div>
+    <div class="stuff-container">
+        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" id="ft_img">
+       
+        <h2 id="username">USER LOGIN</h2>
+    <form id="createAccountForm">
+        <input type="text" placeholder="Username" id="username_plc" required>
+        <input type="password" placeholder="Password" id="password-plc" required>
+        <input type="checkbox" id="rmb">
+        <h2 id="rmb2">Remember me</h2>
+        <a href="/forgotpassword" id="forgot">Forgot password?</a>
+        <input type="submit" value="Login">
+    </form>
+
+        <img src="https://logodix.com/logo/1727545.png" id="usr_logo">
+        <img src="https://w7.pngwing.com/pngs/975/821/png-transparent-password-manager-computer-icons-password-strength-password-safe-chang-miscellaneous-password-strength-password-safe-thumbnail.png" id="pass_logo">
+        <img src="https://png.pngtree.com/png-clipart/20230925/original/pngtree-eye-password-icon-for-web-and-mobile-design-vector-png-image_12859876.png" id="pass-see-eye">
+        <img src="https://static-00.iconduck.com/assets.00/eye-password-hide-icon-512x512-iv45hct9.png" id="pass-close-eye">
+ 
+    </div>
+
+</div>
+
+<!--This is for the responive website-->
+<div class="responsive_elements">
+  
+</div>
+
+<script>
+        const cls_eye = document.querySelector("#pass-close-eye")
+        const opn_eye = document.querySelector("#pass-see-eye") 
+        const  password_plc = document.querySelector("#password-plc") 
+
+        opn_eye.style.display = 'none';
+   
+
+        cls_eye.addEventListener("click",()=>{
+            opn_eye.style.display = 'block';
+            cls_eye.style.display = 'none';
+            password_plc.type = 'text';
+        })
+        opn_eye.addEventListener("click",()=>{
+            opn_eye.style.display = 'none';
+            cls_eye.style.display = 'block';
+            password_plc.type = 'password';
+        })
+</script>
+
+</body>
+</html>
